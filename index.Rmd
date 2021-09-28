@@ -17,6 +17,10 @@ library(dplyr)
 library(kableExtra)
 ```
 
+# About
+
+These are class notes and R code for Dorcas Ofori-Boaten's STAT-461 : Introduction to Statistics I for Fall term 2021 at Portland State University. 
+
 # D1 : Tuesday September 28, 2021
 
 - Dorcas or Professor Dorcas
@@ -145,7 +149,7 @@ data.frame(skew,definition) %>% kable() %>%
 
 ### Median 
 
-_ to find the median : order the data from smallest to largest and find the value in the middle 
+- to find the median : order the data from smallest to largest and find the value in the middle 
 
   - if total number of population or sample is even then will need to take the two middle values and divide them by 2. 
 
@@ -153,7 +157,7 @@ _ to find the median : order the data from smallest to largest and find the valu
 
 - advisable to use the route of median for summaries 
 
-_ to find the median : order the data set and find the value in the middle 
+- to find the median : order the data set and find the value in the middle 
 
 ### Mode
 
@@ -174,3 +178,5 @@ _ to find the median : order the data set and find the value in the middle
 - Population is the involves the all objects whereas a sample is just a representative subset of the population. 
 
 - Two types of statistics : Descriptive which is the method of calculating descriptive values such as mean, mode, and variance. Inferential statistics uses the descriptions to infer or make predictions about the future. 
+
+# D2 : Thurseday September 30, 2021
