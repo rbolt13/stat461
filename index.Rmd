@@ -179,4 +179,4 @@ data.frame(skew,definition) %>% kable() %>%
 
 - Two types of statistics : Descriptive which is the method of calculating descriptive values such as mean, mode, and variance. Inferential statistics uses the descriptions to infer or make predictions about the future. 
 
-# D2 : Thurseday September 30, 2021
+# D2 : Thursday September 30, 2021
