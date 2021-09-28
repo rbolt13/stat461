@@ -1,0 +1,13 @@
+---
+title: "About"
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'about.html'))})
+output:
+  html_document:
+    theme: darkly
+---
+
+These are class notes and R code for Dorcas Ofori-Boaten's STAT-461 : Introduction to Statistics I for Fall term 2021 at Portland State University. 

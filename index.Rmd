@@ -1,0 +1,176 @@
+---
+title: "Notes"
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
+output:
+  html_document:
+    toc: true
+    toc_float: TRUE
+    theme: darkly
+---
+
+```{r,echo=F, message=F}
+library(dplyr)
+library(kableExtra)
+```
+
+# D1 : Tuesday September 28, 2021
+
+- Dorcas or Professor Dorcas
+
+- first of series of three courses 
+
+- originally from Ghana (small country)
+
+- passion and drive for math and analysis 
+
+- goal of all classes is academic **excellence** 
+
+- send email anytime of day to doforib2@pdx.edu
+
+- please read through syllabus 
+
+- first homework will be assigned on Thursday and due the following Thurseday 
+
+- due dates will switch to Tuesday after the midterm 
+
+- extra credit can be carried onto something in the future if it isn't needed on direct homework 
+
+- some extra credit will be in the slides (pay attention)
+
+- homework due at 11:5PM (wont work at 12:00)
+
+## Chapter 1 : What is Statistics? 
+
+- statistics is applied math which allows you to study data to form a judgment in a case of real world applications. 
+
+- have discipline that is math related, but more applied in it's focus 
+
+- get data, then summary or form of information from that data
+
+- real world scenarios aren't fixed or absolute 
+
+- in collection of data there is variability, but we are still able to capture the variability (that is the endtails of statistics)
+
+- When you say something is average, you are saying it with some confidence
+
+- random errors also have to be continuous 
+
+### Population , Sample, Census
+  
+```{r, echo=F}
+Parent <- c("Population : entire collection of objects in a study (focus of the study)", "Sample : smaller portion of population that reflects population", "Census : all desired information of a population ")
+Child <- c("Parameter", "Statistic", "")
+Example <- c("all PSU Student", "sample of students", "")
+data.frame(Parent,Child, Example)  %>% kable() %>%
+  kable_material_dark()
+
+```
+
+- the first letter of each of these goes back to the parent
+
+- Example: Difference between rookie salaries between Yankee and Marlon players. 
+
+  - What are the collection of objects for this study?  (aka the **the population**)
+
+    - The entire collection of people, who include all Yankee players and all Marlon players 
+
+- a **sample** is a smaller portion of the population used to predict the nature of the entire population 
+
+  - there are different ways to sample different schemes 
+  
+  - make sure the sample is a true reflection of the structure of the population 
+  
+- the **census** is when you go into population and collection all desired information person by person (or object to object)
+
+  - list of desired information is know as a **census** 
+
+```{r, echo=F}
+Types <- c("Descriptive", "Inferential")
+Defintition <- c("allow the methods to calculate summaries (mean, variance, ect.)","want to infer, predict what will happen next")
+Z <- c("","Probability")
+Methods <- c("graphical (histogram on) and numerical", "")
+data.frame(Types, Defintition, Methods) %>% kable() %>%
+  kable_material_dark()
+```
+
+- once able to describe sampel and move it onto the population you are moving into inferential population 
+
+### Descriptive Statistics 
+
+- for graphical methods looks at ..
+
+1. the center
+
+2. the variation
+
+3. the distribution $\frac{a_{1}+a_{2}+a_{3}+...+a_{n}}{n}$
+
+4. time 
+
+5. outliers 
+
+- histogram is bars laid side by side to show data in a study 
+
+### Skew
+
+- left skew, right skew, and symmetric distribution 
+
+```{r, echo=F}
+skew <- c("Right Skew", "Left Skew", "Symmetric")
+definition <- c("data is on the left with gradation will decreasing to the right", "tallest bar will be to the right and gradion will be to the left", "equibalance state, where the tallest bar is in the middle and divides the data into two equal parts")
+
+data.frame(skew,definition) %>% kable() %>%
+  kable_material_dark()
+```
+
+- for a normal distribution mean, median, and mode are the same thing 
+
+- based on skewness you can tell where mean will fall 
+
+### Mean 
+
+- Population Mean : $\mu=\frac{x_{1}+x_{2}+x_{3}+...+x_{n}}{N}$
+
+- Sample Mean : $\overline{x}=\frac{x_{1}+x_{2}+x_{3}+...+x_{n}}{n}$
+
+- the mean is sensitive to outliners (not robust)
+
+- the mean is not an accurate value to give on its own. 
+
+- trimmed mean doesn't mean you throw away, you simply compute the mean you are intrested in 
+
+### Median 
+
+_ to find the median : order the data from smallest to largest and find the value in the middle 
+
+  - if total number of population or sample is even then will need to take the two middle values and divide them by 2. 
+
+- median is robust to outliers, because the center will still be the center regardless 
+
+- advisable to use the route of median for summaries 
+
+_ to find the median : order the data set and find the value in the middle 
+
+### Mode
+
+- highest frequency 
+
+- value that has appeared the highest number of times
+
+- mode is essential descriptor for data 
+
+### Variance  
+
+- Population $\sigma ^{2}=\frac{[(x_{1}-\mu)^{2}+(x_{2}-\mu)^{2}+...(x_{n}-\mu)^{2}]}{N}=\frac{(x_{i}-\overline{x})^{2}}{N}$
+
+### Summary 
+
+- Statistics is the real world application of math which allows one to study data in order to form a judgment.
+
+- Population is the involves the all objects whereas a sample is just a representative subset of the population. 
+
+- Two types of statistics : Descriptive which is the method of calculating descriptive values such as mean, mode, and variance. Inferential statistics uses the descriptions to infer or make predictions about the future. 
