@@ -66,7 +66,7 @@ These are class notes and R code for Dorcas Ofori-Boaten's STAT-461 : Introducti
 ### Population , Sample, Census
   
 ```{r, echo=F}
-Parent <- c("Population : entire collection of objects in a study (focus of the study)", "Sample : smaller portion of population that reflects population", "Census : all desired information of a population ")
+Parent <- c("Population : well defined collection of objects in a study (focus of the study)", "Sample : smaller portion of population that reflects population", "Census : all desired information of a population ")
 Child <- c("Parameter", "Statistic", "")
 Example <- c("all PSU Student", "sample of students", "")
 data.frame(Parent,Child, Example)  %>% kable() %>%
