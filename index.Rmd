@@ -149,6 +149,8 @@ data.frame(skew,definition) %>% kable() %>%
 
 ### Median 
 
+- sample median : $\widetilde{x}$
+
 - to find the median : order the data from smallest to largest and find the value in the middle 
 
   - if total number of population or sample is even then will need to take the two middle values and divide them by 2. 
@@ -167,9 +169,15 @@ data.frame(skew,definition) %>% kable() %>%
 
 - mode is essential descriptor for data 
 
-### Variance  
+### Variance and Standard Deviation
 
-- Population $\sigma ^{2}=\frac{[(x_{1}-\mu)^{2}+(x_{2}-\mu)^{2}+...(x_{n}-\mu)^{2}]}{N}=\frac{(x_{i}-\overline{x})^{2}}{N}$
+- Population Variance :  $\sigma ^{2}=\frac{[(x_{1}-\mu)^{2}+(x_{2}-\mu)^{2}+...(x_{n}-\mu)^{2}]}{N}=\frac{(x_{i}-\overline{x})^{2}}{N}$
+
+- Population Standard Deviation : $\sigma$
+
+- Sample Variance : $s^{2}=\frac{[(x_{1}-\overline{x})^{2}+(x_{2}-\overline{x})^{2}+...(x_{n}-\overline{x})^{2}]}{n}=\frac{(x_{i}-\overline{x})^{2}}{n}$
+
+- Sample Standard Deviation : $s$
 
 ### Summary 
 
@@ -177,6 +185,16 @@ data.frame(skew,definition) %>% kable() %>%
 
 - Population is the involves the all objects whereas a sample is just a representative subset of the population. 
 
-- Two types of statistics : Descriptive which is the method of calculating descriptive values such as mean, mode, and variance. Inferential statistics uses the descriptions to infer or make predictions about the future. 
+- Two types of statistics : 
+  - Descriptive which is the method of calculating descriptive values such as mean, median, mode, and variance, as well as graphical methods such as a histogram (see Histogram Trial- Day 1)
+  - Inferential statistics uses the descriptions to infer or make predictions about the future. 
+  
+- skew data has the bulk of the data beside it. 
+  - left skew, bulk of data is on right (mean < mode) 
+  - right skew, bulk of data is on left (mean > mode)
+
+- Population uses geek symbols, and Sample uses the alphabet. 
 
 # D2 : Thursday September 30, 2021
+
+### Range
