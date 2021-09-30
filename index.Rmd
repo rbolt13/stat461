@@ -135,11 +135,17 @@ data.frame(skew,definition) %>% kable() %>%
 
 - based on skewness you can tell where mean will fall 
 
+- other graph patterns : U shape, uniform, Binodal (two bumps), bell-shaped
+
 ### Mean 
 
 - Population Mean : $\mu=\frac{x_{1}+x_{2}+x_{3}+...+x_{n}}{N}$
 
 - Sample Mean : $\overline{x}=\frac{x_{1}+x_{2}+x_{3}+...+x_{n}}{n}$
+
+- Sample Mean (textbook) : the sample mean , "y-bar", of _n_ measured responses $y_{1},y_{2},...,y_{n}$
+
+$$\overline{y}=\frac{1}{n}\sum_{i=1}^{n}y_{i}$$
 
 - the mean is sensitive to outliners (not robust)
 
@@ -173,11 +179,13 @@ data.frame(skew,definition) %>% kable() %>%
 
 - Population Variance :  $\sigma ^{2}=\frac{[(x_{1}-\mu)^{2}+(x_{2}-\mu)^{2}+...(x_{n}-\mu)^{2}]}{N}=\frac{(x_{i}-\overline{x})^{2}}{N}$
 
-- Population Standard Deviation : $\sigma$
+- Population Standard Deviation : $\sigma=\sqrt{\sigma^{2}}$
 
 - Sample Variance : $s^{2}=\frac{[(x_{1}-\overline{x})^{2}+(x_{2}-\overline{x})^{2}+...(x_{n}-\overline{x})^{2}]}{n}=\frac{(x_{i}-\overline{x})^{2}}{n}$
 
-- Sample Standard Deviation : $s$
+- Sample Variance (textbook) : $$s^{2}=\frac{1}{n-1}\sum_{i=1}^{n}(y_{i}-\overline{y})^{2}$$
+
+- Sample Standard Deviation : $s=\sqrt{s^{2}}$
 
 ### Summary 
 
@@ -194,6 +202,8 @@ data.frame(skew,definition) %>% kable() %>%
   - right skew, bulk of data is on left (mean > mode)
 
 - Population uses geek symbols, and Sample uses the alphabet. 
+
+- I need to start recognizing the matching the symbols and equations faster in my mind. This will help me understand the regression class better. 
 
 # D2 : Thursday September 30, 2021
 
