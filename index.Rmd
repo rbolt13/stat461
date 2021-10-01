@@ -175,6 +175,10 @@ $$\overline{y}=\frac{1}{n}\sum_{i=1}^{n}y_{i}$$
 
 - mode is essential descriptor for data 
 
+### Range
+
+Max - Min 
+
 ### Variance and Standard Deviation
 
 - Population Variance :  $\sigma ^{2}=\frac{[(x_{1}-\mu)^{2}+(x_{2}-\mu)^{2}+...(x_{n}-\mu)^{2}]}{N}=\frac{(x_{i}-\overline{x})^{2}}{N}$
@@ -207,4 +211,123 @@ $$\overline{y}=\frac{1}{n}\sum_{i=1}^{n}y_{i}$$
 
 # D2 : Thursday September 30, 2021
 
-### Range
+$\Rightarrow$ Review from last class : 
+
+- Characterizing a Set of Measurements : Graphical Methods
+
+  - Distribution Patterns : U Shape, Uniform, Bimodal, Bell-Shape (Normal)
+  
+  - Symmetry (balancing in the middle), right skewed (mean to the right of data), left skewed (mean to the left of data)
+  
+  - Histograms can be used with frequency, relative frequency or percentage. 
+  
+- Characterizing a Set of Measurements : Numerical Methods
+
+  - Mean (average)
+  
+    - Sample Mean : $\overline{y}=\frac{1}{n}\sum_{i=1}^{n}y_{i}$
+    
+    - Population Mean : $\mu =\frac{1}{N}\sum_{i=1}^{N}Y_{i}$
+    
+    - Mean is sensitive to outliers because it uses every data value
+    
+  - Median (middle value)
+  
+    - Median is not sensitive to outliers because it only looks at middle values
+    
+    - For even data sets the mean of the two middle values is the median 
+    
+  - Mode (appears most frequently)
+  
+  - Range (Max - Min)
+  
+    - sensitive to outliers
+  
+  - Variance (avg. **squared** deviation of data from mean)
+  
+    - Population Variance : $\sigma^{2}=\frac{1}{N}\sum_{i=1}^{N}(Y_{i}-\mu)^{2}$
+    
+    - Sample Variance : $s^{2}=\frac{1}{n-1}\sum_{i=1}^{n}(y_{i}-\overline{y})^{2}=\frac{1}{n-1}[\sum_{i=1}^{n}y_{i}^{2}-n\overline{y}^{2}]$
+    
+    - sensitive to outliers
+  
+  - Standard Deviation (avg. deviation of data from mean)
+  
+    - Population Standard Deviation : $\sigma=\sqrt{\sigma^{2}}$
+    
+    - Sample Standard Deviation : $s=\sqrt{s^{2}}$
+    
+    - Approximate Sample : $s\approx \frac{\text{Range}}{4}$
+    
+    - sensitive to outliers
+    
+  - Smaller variance or standard deviation indicates that the data are more consistent 
+  
+  
+### Examples
+**In class** : Given a random sample of 10 observations such that the sample mean is 5 and $\sum_{i=1}^{n}y_{i}^{2}=350$. Compute the sample standard deviation. (Hint use the shortcut formula)
+
+Given $n=10$ and $\overline{y}=5$ the sample standard deviation is : 
+
+\begin{equation} \label{a}
+\begin{split} 
+s & = \sqrt{\frac{1}{n-1}[\sum_{i=1}^{n}y_{i}^{2}-n\overline{y}^{2}]}\\
+& = \sqrt{\frac{1}{10-1}[350-(10*5^{2})]}\\
+& = \sqrt{\frac{100}{9}}\\
+& = 3.33
+\end{split}
+\end{equation}
+
+
+**Example 11** : Listed below are the distances (in kilometers) from a home to local supermarkets. 
+
+```{r}
+data <- c(1.1, 4.2, 2.3, 4.7, 2.7, 3.2, 5.6, 3.3, 3.5, 3.8, 4.0, 1.5, 4.5, 4.5, 2.5, 4.8, 3.3, 5.5, 6.5, 12.3) 
+data
+```
+
+(a) Compute the Range (12.3-1.1)
+
+```{r}
+range <- max(data)-min(data)
+range
+```
+
+(b) Approximate the standard deviations usig the range 
+
+$s\approx \frac{\text{Range}}{4}=\frac{11.2}{4}=2.8$
+
+(c) The following output shows numerical summaries obtained with the R package pastecs. 
+
+```{r}
+library(pastecs)
+stat.desc(data)
+```
+
+Why do you think the computed s (2.343) is slightly smaller than the approximated value in part (b)? 
+
+Simple, becauase part(b) is an approximation. 
+
+
+
+### The Empirical Rule 
+When the data is bell-shaped (normally distributed) then the **Empirical Rule** can be used to find the percentage of the data with 1, 2, or 3 standard deviations about the mean. 
+
+<center>
+
+![](img/img1.png)
+
+</center> 
+
+- first use the **Empirical Rule** to find out the number of standard deviations (z) correspond to bounds of interval
+
+- next transfer z to data value (y) of variable using the following formula
+
+Data Value = Mean + z*Standard Deviation 
+
+- sample : $y=\overline{y}+zs$
+
+- population : $Y=\mu +z\sigma$
+
+
+
