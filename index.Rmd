@@ -293,7 +293,7 @@ range <- max(data)-min(data)
 range
 ```
 
-(b) Approximate the standard deviations usig the range 
+(b) Approximate the standard deviations using the range 
 
 $s\approx \frac{\text{Range}}{4}=\frac{11.2}{4}=2.8$
 
@@ -329,5 +329,206 @@ Data Value = Mean + z*Standard Deviation
 
 - population : $Y=\mu +z\sigma$
 
+### Summary 
 
+- Review descripitive statistics including examples
+
+- The Empirical Rule : 68-95-99.7
+
+# D3 : Tuesday October 5, 2021
+
+- moving into chapter 2 which deals with more probability 
+
+- review empirical rule 
+
+### Examples
+
+**Example** : Resting breathing rates for college-age students are approximately normally distributed (bell-shaped) with mean 12 and standard deviation 2.3 beaths per minute. 
+
+(a) What percentage of students have between 9.7 and 14.3 breaths per minute? 
+
+$z_{1}=\frac{y-\overline{y}}{s}=\frac{9.7-12}{2.3}=-1$
+
+$z_{2}=\frac{14.3-12}{2.3}=1$
+
+Accoding to the empirical rule, about 68% of students have breath rate within 1 standard deviaiton of the mean. 
+
+(b) What percentage of students have less than 7.4 breaths per minute? 
+
+$z=\frac{7.4-12}{2.3}=-2$
+
+$\frac{100-95}{2}=2.5\%$
+
+2.5% of students have brath rates less than 7.4 breaths per minute. 
+
+**Example** Select all the histograms for which the empirical rule is valid or good to use.
+
+(f), because it is the only one that follows the bell shape curve 
+
+### Probability 
+
+What is probability? 
+
+**<span style="color: orange;">Probability</span>** refers to the study of randomness and uncertainty. 
+
+- Probability indicates how likely it is for something to occur in a random experiment. For example, how likely or what is the chance that if you roll a fair 100-sided die (slides labeled 1 through 100), how likely you observe 65 on the top. 
+
+An **<span style="color: orange;">experiment</span>** is any activity / process whose outcome s is subject to uncertainty. 
+
+- Toss a coin, Roll a Die once or twice. 
+
+A **<span style="color: orange;">sample space</span>** is the set of all possible outcome of a random experiment. Denoted by S. 
+
+- Toss a coin once $S=\{\text{heads, tails}\}$
+
+An **<span style="color: orange;">event</span>** is a subset (small collection of outcomes) of sample space and denoted by capital letter. Event and set are interchangeable. 
+
+- What are the outcomes with at least one head when a coin is tossed twice? 
+
+$S=\{\text{HH, HT, TH, TT}\}$      $A=\{\text{HT,TH}\}$
+
+- If an event has only a single point, then it is a simple event. Otherwise it is a compound event. 
+
+The **<span style="color: orange;">Null set (empty event)</span>** is an event with no elements. Denoted $\emptyset$ or $\{\}$.
+
+### Set Theory Notation
+
+The **<span style="color: orange;">complement</span>** of an event A is the set of all outcomes in the sample space that do not belong to A. Denoted : $A^{c}$, $A'$ or $\overline{A}$.
+
+The **<span style="color: orange;">intersection</span>** of two events A and B. The collection of all outcomes that appear in both A AND B. Denoted : $A\cap B$
+
+- $A\cap B=B\cap A$
+
+The **<span style="color: orange;">union</span>** of two events A and B. The collection of all outcomes that appear in either A OR B OR in both. Denoted : $A\cup B$
+
+Event B is a **<span style="color: orange;">subset</span>** of Event A if **every** element of B is also in A. This is denoted by $B\subset A$
+
+If $A\cap B=\emptyset$, then A and B are **<span style="color: orange;">disjoint</span>** or **<span style="color: orange;">mutually exclusive</span>** events. 
+
+$A_{1}, A_{2},...,A_{n}$ are **<span style="color: orange;">exhaustive</span>** events if and only if $A_{1}\cup A_{2}\cup ...\cup A_{n}=S$
+
+$A_{1}, A_{2},...,A_{n}$ are pairwise **<span style="color: orange;">mutually exclusive (dijoint)</span>** and **<span style="color: orange;">exhaustive</span>** events :
+
+1. if and only if $A_{1}\cap A_{j}=\emptyset \forall i\ne j$
+
+<center> AND </center>
+
+2. $A_{1}\cup A_{2}\cup ...\cup A_{n}=S$
+
+
+### Basic Properties
+
+$A\cap \emptyset = \emptyset$ 
+
+$A\cup \emptyset =A$ 
+
+$A\cap \overline{A}=\emptyset$ 
+
+$A\cup \overline{A}=S$ 
+
+$\overline{S}=\emptyset$ 
+
+$\overline{(\overline{A})}=A$
+
+### DeMorgan's Law
+
+$(\overline{A\cap B})=\overline{A}\cup \overline{B}$
+
+$(\overline{A\cup B})=\overline{A}\cap \overline{B}$
+
+### Distributive Law
+
+$A\cap (B\cup C) = (A\cap B)\cup (A\cap C)$
+
+$A\cup (B\cap C) = (A\cup B)\cap (A\cup C)$
+
+### Probability 
+
+- probability of an event $A:P(A)$ 
+
+$$P(A)=\frac{\text{count(numbers) of outcomes in event A}}{\text{count (number) of outcomes in the sample space}}$$
+
+Note : $0\leq P(A)\leq 1$
+
+### Counting Rules
+
+**<span style="color: orange;">Product rule for k-tuplets</span>** : If a process can be broken down into a sequence of K steps, then the total number of possible outcomes is the product of the number of outcomes at each step. 
+
+- Suppose a license plate number is formed with 3 letters, followed by 3 numbers. How many different outcomes are possible? $26^{3}\cdot 10^{3}=17576000$
+
+The **<span style="color: orange;">Factorial Rule</span>** is the number of ways to order or rank or arrange n objects is $n!=n(n-1)(n-2)...(3)(2)(1)$. 
+
+Notes 0!=1, and 1!=1
+
+- There are four candidates for a job. The members of the search committee will rank the four candidates from strongest to weakest. How many different outcomes are possible? $4!=24$
+
+The **<span style="color: orange;">Combination rule</span>** has the following set up : 
+
+1. n different items are available
+
+2. select k of the n items without replacement
+
+3. order of selection does not matter 
+
+$${n\choose k}C={n\choose k}=\frac{n!}{k!(n-k)!}$$
+
+Note : "n choose k"
+
+- How many 5 element subsets are in the set S={2, 3, 4, 5, 6, 7, 8, 9}?
+
+The **Permutation Rule** has the following set up : 
+
+1. n different items are available
+
+2. Select k of the n items without replacement 
+
+3. Order of selection matter.
+
+$${n\choose k}P=\frac{n!}{(n-k)!}$$
+
+- There are ten candidates for a job. The search committee will choose four of them, and rank the chosen four from strondest to weakest. How many different outcomes are possible? 
+
+### Counting Rules : Summary 
+
+<center>
+![](img/img2.png)
+</center>
+
+### More Examples 
+These are not extra credit, but try these to get counting technique down. 
+
+<center>
+![](img/img3.png)
+</center>
+
+### Probability Examples
+A student prepares an exam by studying a list of 10 problems. She can solve 6 of them. For the exam, the instructor selects 5 problems at random from the 10 on the list given to the students. What is the probability that the student can solve all 5 problems on the exam? 
+
+$\frac{6\choose5}{10\choose 5}$
+
+- we want to see how many combinations are possible in the space, so it doesn't matter how many the student can solve when calculating the denominator. 
+
+### Extra Credit 
+
+The college of liberal arts and sciences is made up of 12 freshmen, 10 sophomores, 7 juniors and 7 seniors. What is the probability of selecting a student from each group to form a student advisory council? 
+
+Answer : 0.42%
+
+### Summary 
+
+- Homework 1 is due the end of day Thursday 
+
+- Email Extra Credit to Professor before class Thursday 
+
+- Today we did examples applying The Empirical Rule and the equation $z=\frac{y-\overline{y}}{s}$
+
+- Went over basic probability definitions, notation, and equations 
+
+- Four counting rules where order does and doesn't matter, and there is or is not replacement. (see picture above)
+
+- Should work through examples given today before next class, and read chapter 2 of textbook. 
+
+- Start prepping practice test problems (with homework and in class examples) to study this weekend. 
+
+# D4 : Thursday October 7th, 2021
 
