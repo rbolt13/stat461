@@ -21,7 +21,7 @@ library(kableExtra)
 
 These are class notes and R code for Dorcas Ofori-Boaten's STAT-461 : Introduction to Statistics I for Fall term 2021 at Portland State University. 
 
-# D1 : Tuesday September 28, 2021
+# D1 : Tues. September 28, 2021
 
 - Dorcas or Professor Dorcas
 
@@ -209,7 +209,7 @@ Max - Min
 
 - I need to start recognizing the matching the symbols and equations faster in my mind. This will help me understand the regression class better. 
 
-# D2 : Thursday September 30, 2021
+# D2 : Thur. September 30, 2021
 
 $\Rightarrow$ Review from last class : 
 
@@ -335,7 +335,7 @@ Data Value = Mean + z*Standard Deviation
 
 - The Empirical Rule : 68-95-99.7
 
-# D3 : Tuesday October 5, 2021
+# D3 : Tues. October 5, 2021
 
 - moving into chapter 2 which deals with more probability 
 
@@ -516,9 +516,9 @@ Answer : 0.42%
 
 ### Summary 
 
-- Homework 1 is due the end of day Thursday 
+- Homework 1 is due the end of day Thursday (complete)
 
-- Email Extra Credit to Professor before class Thursday 
+- Email Extra Credit to Professor before class Thursday (complete)
 
 - Today we did examples applying The Empirical Rule and the equation $z=\frac{y-\overline{y}}{s}$
 
@@ -530,5 +530,5 @@ Answer : 0.42%
 
 - Start prepping practice test problems (with homework and in class examples) to study this weekend. 
 
-# D4 : Thursday October 7th, 2021
+# D4 : Thur. October 7th, 2021
 
