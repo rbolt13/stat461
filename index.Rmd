@@ -21,7 +21,7 @@ library(kableExtra)
 
 These are class notes and R code for Dorcas Ofori-Boaten's STAT-461 : Introduction to Statistics I for Fall term 2021 at Portland State University. 
 
-# D1 : Tues. September 28, 2021
+# D1 : Tues. Sept. 28, 2021
 
 - Dorcas or Professor Dorcas
 
@@ -209,7 +209,7 @@ Max - Min
 
 - I need to start recognizing the matching the symbols and equations faster in my mind. This will help me understand the regression class better. 
 
-# D2 : Thur. September 30, 2021
+# D2 : Thur. Sept. 30, 2021
 
 $\Rightarrow$ Review from last class : 
 
@@ -335,7 +335,7 @@ Data Value = Mean + z*Standard Deviation
 
 - The Empirical Rule : 68-95-99.7
 
-# D3 : Tues. October 5, 2021
+# D3 : Tues. Oct. 5, 2021
 
 - moving into chapter 2 which deals with more probability 
 
@@ -460,7 +460,7 @@ The **<span style="color: orange;">Factorial Rule</span>** is the number of ways
 
 Notes 0!=1, and 1!=1
 
-- There are four candidates for a job. The members of the search committee will rank the four candidates from strongest to weakest. How many different outcomes are possible? $4!=24$
+- There are four candidates for a job. The members of the search committee will rank the four candidates from strongest to weakest. How many different outcomes are possible? $4!=424$
 
 The **<span style="color: orange;">Combination rule</span>** has the following set up : 
 
@@ -486,7 +486,7 @@ The **Permutation Rule** has the following set up :
 
 $${n\choose k}P=\frac{n!}{(n-k)!}$$
 
-- There are ten candidates for a job. The search committee will choose four of them, and rank the chosen four from strondest to weakest. How many different outcomes are possible? 
+- There are ten candidates for a job. The search committee will choose four of them, and rank the chosen four from strongest to weakest. How many different outcomes are possible? 
 
 ### Counting Rules : Summary 
 
@@ -497,14 +497,42 @@ $${n\choose k}P=\frac{n!}{(n-k)!}$$
 ### More Examples 
 These are not extra credit, but try these to get counting technique down. 
 
-<center>
-![](img/img3.png)
-</center>
+1. A fleet of 9 taxis is to be dispatched to 3 airports in such a way that 3 go to airport A, 5 go to airport B and 1 goes to airport C. In how many distinct ways can this be accomplished? 
+
+$^{9}C_3\times^{6}C_5\times^{1}C_1=84\times 6\times 1=504$
+
+Using TI-84 : [MATH]$\Leftarrow$[PRB] 3: nCr 
+
+2. From a collection of 9 paintings, four are to be selected to hang side by side on a gallery wall in positions 1, 2, 3, and 4. In how many ways can this be done? 
+
+$^{9}P_3=3,024$
+
+- because order matters 
+
+Using TI-84 : [MATH]$\Leftarrow$[PRB] 2: nPr
+
+3. Suppose your iPod contains 5 albums, each with 10 songs. How many ways can a playlist of 4 songs be selected if a song can be repeated? 
+
+$(5\times 10)^4=6,250,000$
+
+- we want to choose 4 songs out of 5 albums (50 songs) with replacement, and order matters. 
+
+4. A class consists of 19 students: 8 sophomores, 5 juniors, and 6 seniors. The instructor randomly selects a group of 6 students to present problems on the board. How many possible groups can be chosen? 
+
+$^{19}P_6=19,535,040$
+
+- we want to choose 6 students out of 19 without replacement, and order matters. 
+
+5. A class consists of 19 students: 8 sophomores, 5 juniors and 6 seniors. The instructor randomly selects a group of 6 students to present problems on the board. How many possible groups can be chosen if the group must consist of 2 sophomores, 2 juniors, and 2 seniors? 
+
+$^{8}C_2\times^{5}C_2\times^{6}C_2=28\times 10\times15=4,200$
+
+- we want to choose 2 out of 8 sophomores, 2 out of 5 juniors, and 2 out of 6 seniors without replacement, and order does not matter. 
 
 ### Probability Examples
 A student prepares an exam by studying a list of 10 problems. She can solve 6 of them. For the exam, the instructor selects 5 problems at random from the 10 on the list given to the students. What is the probability that the student can solve all 5 problems on the exam? 
 
-$\frac{6\choose5}{10\choose 5}$
+$\frac{^{6}C_5}{^{10}C_5}=\frac{6\choose5}{10\choose 5}=0.024$
 
 - we want to see how many combinations are possible in the space, so it doesn't matter how many the student can solve when calculating the denominator. 
 
@@ -512,13 +540,21 @@ $\frac{6\choose5}{10\choose 5}$
 
 The college of liberal arts and sciences is made up of 12 freshmen, 10 sophomores, 7 juniors and 7 seniors. What is the probability of selecting a student from each group to form a student advisory council? 
 
-Answer : 0.42%
+$\frac{^{12}C_1\times ^{1}C_1\times ^{7}C_1\times ^{7}C_1}{^{36}C_4}=\frac{5880}{58905}=0.099822$
+
+Answer : ~9.98% rare likelihood 
+
+- we want to first choose 4 out of 36 students without replacements, and order doesn't matter. P(B)
+
+- then we want to choose 1 of the 12 freshman, 1 of 10 sophomores, 1 of 7 junors, and 1 of 7 seniors without replacements and order doesn't matter. P(A)
+
+- P(A)/P(B)
 
 ### Summary 
 
-- Homework 1 is due the end of day Thursday (complete)
+- Homework 1 is due the end of day Thursday (completed)
 
-- Email Extra Credit to Professor before class Thursday (complete)
+- Email Extra Credit to Professor before class Thursday (completed)
 
 - Today we did examples applying The Empirical Rule and the equation $z=\frac{y-\overline{y}}{s}$
 
@@ -526,9 +562,214 @@ Answer : 0.42%
 
 - Four counting rules where order does and doesn't matter, and there is or is not replacement. (see picture above)
 
-- Should work through examples given today before next class, and read chapter 2 of textbook. 
+- Should work through examples given today before next class (completed)
 
-- Start prepping practice test problems (with homework and in class examples) to study this weekend. 
+# D4 : Thur. Oct. 7th, 2021
 
-# D4 : Thur. October 7th, 2021
+- review some of the counting problems from last class
+
+### Axioms of Probability 
+
+- For any event A, $P(A)\geq 0$
+
+- P(S)=1
+
+- If $A_1,A_2,A_3,$... is an infinite collection of pairwise mutually exclusive events, then $P(A_1\cup A_2\cup A_3\cup ...)\sum P(A_i)$
+
+### Properties of Probability 
+
+- P($\emptyset$)=0
+
+- If A and B are disjoint, then $P(A\cap B)=0$
+
+- For any event A, $P(A)+P(A^C)=P(S)=1$
+
+- $\Rightarrow P(A)=1-P(A^C)$
+
+- $\Rightarrow P(A^C)=1-P(A)$
+
+- For events A and B, $\Rightarrow P(A\cup B)=P(A)+P(B)-P(A\cap B)$
+
+- If A and B are dijoint, then $\Rightarrow P(A\cup B)=P(A)+P(B)$
+
+- $P(A\cup B\cup C)=P(A)+P(B)+P(C)-P(A\cap B)-P(A\cap C)-P(B\cap C)+P(A\cap B\cap C)$
+
+### Examples
+What is the probability of obtaining a total of 7 or 11 when two dice are tossed once? (imagine a picture of all the combinations)
+
+\begin{equation}\label{711dice}
+\begin{split}
+P(7\text{ or }11) & = P(7\cup 11)\\
+& =  P(7)+P(11)+P(7\cap 11)\\
+& = P(7)+P(11)+0\\
+& = \frac{6}{36}+\frac{2}{36}\\
+& = \frac{8}{36}
+\end{split}
+\end{equation}
+
+What is the probability of obtaining a 9 or 13? 
+
+\begin{equation}\label{913dice}
+\begin{split}
+P(9\text{ or }13) & = P(9\cup 13)\\
+& =  P(9)+P(13)+P(9\cap 13)\\
+& = P(9)+P(13)+0\\
+& = \frac{4}{36}+\frac{0}{36}\\
+& = \frac{4}{36}
+\end{split}
+\end{equation}
+
+Suppose that in a class of 100 kids that 45 like Sprite, 60 like Cola, and 20 like both. If a kid is randomly selected and ask the drink they like, estimate the following probabilities : (complete in 6 minutes)
+
+(a) P(Sprite)=$\frac{45}{100}=0.45$
+
+(b) P(Cola)=$\frac{60}{100}=0.60$
+
+(c) P(Both)=$\frac{20}{100}=0.20$
+
+(d) P(At least one of these drinks)=$0.25+0.2+0.4=0.85$
+
+- can be written as cola or sprite
+
+(e) P(Only Cola) = $=\frac{60-20}{100}=0.4$
+
+(f) P(Neither) = $1-0.85=0.15$
+
+(g) P(Exactly one of the two events occur) = $\frac{40+25}{100}= 0.65$
+
+### More on Properties of Probability 
+
+If $A_1 , A_2 , .... , A_n$ are any events then : 
+
+$P(A_1\cup A_2\cup ...\cup A_3)=P(\bigcup\limits_{i=1}^{n}A_i)=$
+
+$\sum\limits_{i=1}^{n}P(A_i)-\sum \sum\limits_{1\leq ij\leq n} P(A_i\cap A_j)+\sum \sum\limits_{1\leq ijk\leq n}\sum P(A_i\cap A_j\cap A_k)-...+(-1)^{n-1}P(A_1\cap A_2\cap ...A_n )$  
+
+$P(\bigcup\limits_{i=1}^{n}A_i)\leq \sum\limits_{i=1}^n P(A_i)$
+
+### Conditional Probability 
+$P(A|B)$: Probability of A given B. 
+
+- What is the probability that A will occur given that B has occured? 
+
+- For any two events, A and B with $P(B)>0$, the conditional probability of A given B is defined as 
+
+$$P(A|B)=\frac{P(A\cap B)}{P(B)}$$
+
+$$\Rightarrow P(A\cap B)=P(A|B)\times P(B)$$
+
+(**<span style="color: red;">Multiplication Law of Probability</span>**)
+
+$$\Rightarrow P(A\cap B)=P(B|A)\times P(A)$$
+
+- $P(A|B)\ne P(B|A)$
+
+- example : P(dark | midnight)=1, P(midnight|dark)\approx 0
+
+### Example
+One card is taken from a pile of 52 cards. Let event A occur an ace is taken out, event B when a card of spades is taken out. Compute P(A|B) and P(B|A). (two minutes)
+
+$P(A)=\frac{4}{52}$
+
+$P(B)=\frac{13}{52}$
+
+$P(A\cap B)=\frac{1}{52}$
+
+$P(A|B)=\frac{P(A\cap B)}{P(B)}=\frac{\frac{1}{52}}{\frac{13}{52}}=\frac{1}{13}=0.0769$
+
+$P(B|A)=\frac{P(B\cap A)}{P(A)}=\frac{\frac{1}{52}}{\frac{4}{52}}=\frac{1}{4}=0.25$
+
+### Statistical Independence
+- Two events A and B are **<span style="color: orange;">statistically independent</span>** if and only if 
+
+$$P(A\cap B)=P(A)\times P(B)$$
+
+$$P(A|B)=P(A)$$
+
+$$P(B|A)=P(B)$$
+
+### Example  
+Suppose we flip a coin twice. Let $A_1$ = {1st coin is heads} and $A_2$ = {2nd coin is heads}. Are $A_1$ and $A_2$ independent? 
+
+S={HH, HT, TH, TT}
+
+$P(A_1)=\frac{1}{2}$
+
+$P(A_2)=\frac{1}{2}$
+
+$P(A_1\cap A_2)=\frac{1}{4}$
+
+$P(A_2|A_1)=\frac{P(A_1\cap A_2)}{P(A_1)}=\frac{\frac{1}{4}}{\frac{1}{2}}=\frac{1}{2}=P(A_2)$
+
+A beverage store has the following pre-made basket that contain the following gift combinations: 
+
+```{r, echo=F}
+labels <- c("Labels","Coffee", "Tea", "Total")
+cookies <- c("Cookies", 20, 18, 38)
+mugs <- c("Mugs", 13, 16, 29)
+candy <- c("Candy", 15, 12, 27)
+total <- c("Total", 48, 46, 94)
+data.frame(labels, cookies, mugs, candy, total)  %>% kable() %>%
+  kable_material_dark()
+```
+
+Are the events Tea (T) and Candy (C) independent?
+
+$P(T)=\frac{46}{94}$
+
+$P(C)=\frac{27}{94}$
+
+$P(T\cap C)=\frac{12}{94}$
+
+Yes, Tea and Candy are statiistically independent. 
+
+### More of Independence
+If A and B are **<span style="color: orange;">statistically independent</span>**, then 
+
+- A and $\overline{B}$ are independent, that is $P(A\cap \overline{B})=P(A)P(\overline{B})$
+
+- $\overline{A}$ and $\overline{B}$ are independent, that is $P(\overline{A}\cap B)=P(\overline{A})P(B)$
+
+- $\overline{A}$ and $\overline{B}$ are independent, that is $P(\overline{A}\cap \overline{B})=P(\overline{A})P(\overline{B})$
+
+- A collection of events ... are **<span style="color: orange;">pairwise independent</span>** if and only if 
+$$P(A_i\cap A_j )=P(A_i)P(A_j)\forall i\ne j$$
+
+### Mutual Independence
+A collection of events $A_1, A_2, ..., A_n$ are **<span style="color: orange;">mutually independent</span>** if and only if 
+$$P(A_1\cap A_2\cap ....A_n)=P(A_1)P(A_2)...P(A_n)=\prod\limits_{i=1}^{n}P(A_i)$$
+
+- Pairwise independence $\nRightarrow$ Mutually independent
+
+- Mutually independence $\Rightarrow$ Pairwise independence
+
+### The Law of Total Probability 
+Let $A_1, A_2, ..., A_n$ be n **<span style="color: orange;">mutually exclusive (disjoint)</span>** and **<span style="color: orange;">exhaustive</span>** events. Then for any event B, 
+
+$$B=(B\cap A_1)\cup(B\cap A_2)\cup ... (B\cap A_n)$$ 
+
+AND 
+
+$$P(B)=P(B\cap A_1)+(B\cap A_2)+ ... (B\cap A_n)$$
+
+Equivalently, 
+
+$$P(B)=[P(B|A_1)\times P(A_1)]+[P(B|A_2)\times P(A_2)]+...+[P(B|A_n)\times P(A_n)]$$
+
+### Summary 
+- A week ahead of schedule, so next week will be review questions 
+
+- read chapter 2 of textbook
+
+- Start prepping practice test problems (homework, in class examples, textbook) to study this weekend
+
+- start prepping a "cheat sheet" for tests 
+
+- finish / review today's notes when posted 
+
+- start hw 2 when it's post 
+
+# D5 : Tues. Oct. 11th, 2021
+
+
 
