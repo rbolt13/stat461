@@ -763,13 +763,106 @@ $$P(B)=[P(B|A_1)\times P(A_1)]+[P(B|A_2)\times P(A_2)]+...+[P(B|A_n)\times P(A_n
 
 - Start prepping practice test problems (homework, in class examples, textbook) to study this weekend
 
-- start prepping a "cheat sheet" for tests 
+- start prepping a "cheat sheet" for tests (complete)
 
-- finish / review today's notes when posted 
+- finish / review today's notes when posted (complete)
 
-- start hw 2 when it's post 
+- start hw 2 when it's post (wont be posted until next Thu.)
 
-# D5 : Tues. Oct. 11th, 2021
+# D5 : Tues. Oct. 12th, 2021
+
+- review 
+
+- use textbook for practice problems 
+
+### Bayes' Rule 
+
+Let $A_1,A_2,...,A_k$ be k mutually exclusive (disjoint)  events, each with probabilities $P(A_i)$, for $i=1,2,...,k$. 
+
+> $$P(A_i|B)=\frac{P(A_i\cap B)}{P(B)}=\frac{P(B|A_i)\times P(A_i)}{\sum\limits_{j=1}^{k}[P(B|A_j)\times P(A_j)]}$$
+
+### Example 1 
+Suppose that 1% of a population uses a certain drug. Let 
+
+D : _uses the drug_
+
+$D^c$ : _does not use the drug_
+
+T : _tests positive for disease_
+
+$T^C$ : _tests negative for disease_
+
+The drug manufacturer claims that $P(T|D^C)=0.0.015$ ; $P(T^C|D)$
+
+Given a positive test, find the probability that a person actually uses the drug. [Hint: $P(D|T)$]
+
+P(D) = 0.01
+
+$P(D^C)$ = 0.99
+
+- branching out are intersecting statements 
+
+  - Uses the drug and tests positive $P(T\cap D)=P(T|D)\times P(D)=$
+
+  - uses the drug and tests negative $P(T^C\cap D)=P(T^C|D)\times P(D)=$
+
+  - does not use drug and tests positive $P(T\cap D^C)=P(T|D^C)\times P(D^C)=$
+
+  - does not use the drug and tests negative $P(T^C\cap D^C)=P(T|D^C)\times P(D^C)=$
+
+- finding ... using the multiplication law using conditional values 
+
+0.995
+
+Answer : 0.4012 (correct to 4 decimal places)
+
+- every level of the tree adds up to 1 
+
+### Example 2
+65% of the email sent to my account is spam. If an email is actually spam, the spam filter will correcltly identify it 80% of the time. If the email is not spam, the filter still tags it as spam 4% of the time. Given that a message has been tagged as spam, what is the probability that it is actually a spam? Given that a message makes it through the filter without being tagger as a spam, what is the probability that it really isn't spam? 
+
+- looking at performance of the filter 
+
+Let S : spam , and F : flagged as spam 
+
+P(S) = 0.65
+
+P($S^C$) = 0.35
+
+P(F|S) = 0.8
+
+P(F|$S^C$) = 0.04
+
+P($F^C$|S) = 0.2
+
+Question 1 : P(S|F) = 0.9738
+
+
+### Extra Credit 
+
+(slide)
+
+AND
+
+Prove that $^{n+1}C_k=^{n}C_k+^nC_{k-1}$ is true. (not exzactly what is in the book)
+
+- email before 10am Thur. 
+
+- will solve both on Thur. 
+
+### Summary 
+
+- fill in gaps in todays notes
+
+- extra credit 
+
+- pull review questions from textbook 
+
+- homework will be posted Thur. 8pm 
+
+# D6 : Thur. Oct. 14th, 2021
+
+
 
 
 
