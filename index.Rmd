@@ -771,13 +771,25 @@ $$P(B)=[P(B|A_1)\times P(A_1)]+[P(B|A_2)\times P(A_2)]+...+[P(B|A_n)\times P(A_n
 
 # D5 : Tues. Oct. 12th, 2021
 
-- review 
-
 - use textbook for practice problems 
+
+### Review 
+
+- Conditional Probability : $P(A|B)=\frac{A\cap B}{P(B)}$
+
+- Multiplication Law of Probability : $P(A\cap B)=P(B|A)\times P(A)$
+
+- Statistical Independence : IFF $P(A\cap B)=P(A)\times P(B)$ , $P(A|B)=P(A)$ , $P(B|A)=P(B)$
+
+- If A and B are statistically independent, then A and $\overline{B}$ , $\overline{A}$ and B , and $\overline{A}$ and $\overline{B}$ are independent 
+
+- Mutual Independence : IFF $P(A_1\cap A_2\cap ....A_n)=P(A_1)P(A_2)...P(A_n)=\prod\limits_{i=1}^{n}P(A_i)$
+
+- Total Law of Probability : for dijoint and exhaustive events, $P(B)=\sum\limits_{i=1}^k[P(B|A_i)\times P(A_i)]$
 
 ### Bayes' Rule 
 
-Let $A_1,A_2,...,A_k$ be k mutually exclusive (disjoint)  events, each with probabilities $P(A_i)$, for $i=1,2,...,k$. 
+Let $A_1,A_2,...,A_k$ be k mutually exclusive (disjoint) events, each with probabilities $P(A_i)$, for $i=1,2,...,k$. 
 
 > $$P(A_i|B)=\frac{P(A_i\cap B)}{P(B)}=\frac{P(B|A_i)\times P(A_i)}{\sum\limits_{j=1}^{k}[P(B|A_j)\times P(A_j)]}$$
 
@@ -792,29 +804,15 @@ T : _tests positive for disease_
 
 $T^C$ : _tests negative for disease_
 
-The drug manufacturer claims that $P(T|D^C)=0.0.015$ ; $P(T^C|D)$
+The drug manufacturer claims that $P(T|D^C)=0.0.015$ ; $P(T^C|D)=0.005$
 
 Given a positive test, find the probability that a person actually uses the drug. [Hint: $P(D|T)$]
 
-P(D) = 0.01
+$P(D|T)=\frac{P(T|D)\times P(D)}{[P(T|D)\times P(D)]+[P(T|D^C)\times P(D^C)]}$
 
-$P(D^C)$ = 0.99
+![](img/img4.png)
 
-- branching out are intersecting statements 
-
-  - Uses the drug and tests positive $P(T\cap D)=P(T|D)\times P(D)=$
-
-  - uses the drug and tests negative $P(T^C\cap D)=P(T^C|D)\times P(D)=$
-
-  - does not use drug and tests positive $P(T\cap D^C)=P(T|D^C)\times P(D^C)=$
-
-  - does not use the drug and tests negative $P(T^C\cap D^C)=P(T|D^C)\times P(D^C)=$
-
-- finding ... using the multiplication law using conditional values 
-
-0.995
-
-Answer : 0.4012 (correct to 4 decimal places)
+$\Rightarrow P(D|T)=\frac{(0.995)(0.001)}{(0.995\times0.01)+(0.015\times 0.99)}=\frac{199}{496}\approx 0.4012$ (4 dip.)
 
 - every level of the tree adds up to 1 
 
@@ -823,46 +821,195 @@ Answer : 0.4012 (correct to 4 decimal places)
 
 - looking at performance of the filter 
 
-Let S : spam , and F : flagged as spam 
+Let S : spam , and C : spam filter tags as spam 
 
-P(S) = 0.65
+P(S) = 0.65   ,   P(C|S) = 0.8      ,   P(C|$S^C$) = 0.04
 
-P($S^C$) = 0.35
+$P(S|C)=\frac{P(C|S)\times P(S)}{P(C|S\times P(S))]\times [P(C|S^C)\times P(S^C)]}$
 
-P(F|S) = 0.8
+![](img/img5.png)
 
-P(F|$S^C$) = 0.04
+$\Rightarrow P(S|C)=\frac{0.8(0.65)}{[0.8(0.65)]+[(0.04)(0.35)]}=\frac{260}{267}\approx 0.9738$ (4 dp)
 
-P($F^C$|S) = 0.2
+(b) 
 
-Question 1 : P(S|F) = 0.9738
+\begin{equation}\label{ps^C|c^c}
+\begin{split}
+P(S^C|C^C) & = \frac{P(C^C|S^C)\times P(S^C)}{P(C^C|S^C\times P(S^C))]\times [P(C^C|S)\times P(S)]}\\
+& =  \frac{0.96(0.35)}{0.96(0.35)+0.2(0.05)}\\
+& = \frac{168}{233} \pprox 0.7210
+\end{split}
+\end{equation}
 
+(4 dp)
 
 ### Extra Credit 
-
-(slide)
-
-AND
-
-Prove that $^{n+1}C_k=^{n}C_k+^nC_{k-1}$ is true. (not exzactly what is in the book)
-
 - email before 10am Thur. 
 
-- will solve both on Thur. 
+- will solve both on Thur.
+
+**At a certain gas station, 40% of the customers use regular gas ($A_1$), 35% use plus gas ($A_2$), and 25% use premium ($A_3$). Of those customers using regular gas, only 30% fill their tanks (event B). If those customers using plus, 60% fill their tanks , whereas of those using premium, 50% fill their tanks.** 
+
+P($A_1$) = 0.4    ,   P($A_2$) = 0.35   ,   P($A_3$) = 0.25
+
+P(B|$A_1$) = 0.30   ,   P(B|$A_2$) = 0.60   ,   P(B|$A_1$) = 0.50
+
+**(a) What is the probability that the next customer will request plus gas and fill the tank?** 
+
+$P(A_2\cap B)=P(B|A_2)\times P(A_2)=0.60\times 0.35 = 0.21$
+
+**(b) What is the probability that the next customer fills the tank?** 
+
+\begin{equation}\label{p fill tank}
+\begin{split}
+P(B) & = P(A|cap A_1)+P(A|cap A_2)+P(A|cap A_3)\\
+& = [P(B|A_1)\cdot P(A_1)]+[P(B|A_2)\cdot P(A_2)]+[P(B|A_3)\cdot P(A_3)]\\
+& = 0.455
+\end{split}
+\end{equation}
+
+**(c) If the next customer fills the tank, what is the probability taht regular gas is requested? Plus? Premium?**
+
+$P(A_1|B)=\frac{P(A_1\cap B)}{P(B)}=\frac{P(B|A_1)\cdot P(A_1)}{P(B)}=\frac{24}{91}\approx 0.264$ (3 d.p.)
+
+$P(A_2|B)=\frac{P(A_2\cap B)}{P(B)}=\frac{P(B|A_2)\cdot P(A_2)}{P(B)}=\frac{6}{13}\approx 0.462$ (3 d.p.)
+
+$P(A_3|B)=\frac{P(A_3\cap B)}{P(B)}=\frac{P(B|A_3)\cdot P(A_3)}{P(B)}=\frac{25}{91}\approx 0.275$ (3 d.p.)
+
+**Part 2 : Prove that $^{n+1}C_k=^{n}C_k+^nC_{k-1}$ is true. (not exzactly what is in the book)**
+
+Proof : $^{n+1}C_k=^{n}C_k+^nC_{k-1}$
+
+![](img/img6.png)
 
 ### Summary 
 
-- fill in gaps in todays notes
+- Bayes' Rule : $P(A_i|B)=\frac{P(A_i\cap B)}{P(B)}=\frac{P(B|A_i)\times P(A_i)}{\sum\limits_{j=1}^{k}[P(B|A_j)\times P(A_j)]}$
 
-- extra credit 
+- tree diagrams 
 
-- pull review questions from textbook 
+### To Do
 
-- homework will be posted Thur. 8pm 
+- fill in gaps in todays notes (complete)
+
+- extra credit (complete)
 
 # D6 : Thur. Oct. 14th, 2021
 
+- extra credit 
 
+### Chapter 3 : Random Variables & Probability Distributions 
+For a given sample space of en experiment, S, a **<span style="color: orange;">random variable</span>** (typically denoted X or Y, capital letters) is any rule that associates a real number with each outcome in S. 
 
+![](img/img7.png)
 
+### Example 
+Flip a coin three times. Let X = {The number of heads}
 
+![](img/img8.png)
+
+### Types of Random Variables 
+**<span style="color: orange;">Discrete</span>** : A random variable whose possible values either consititue a finite set or one whose range is countabley infinite (count).
+
+- example : the number of studnets in a class, results of rolling a two on a 6-sided die
+
+**<span style="color: orange;">Contnuous</span>** : A random variable whose range is an interval on the number line (measure). Uncountably infinite. 
+
+- example : A dog's weight, a person's height, waiting time for a flight, etc. 
+
+### Probability Distribution 
+
+**<span style="color: orange;">Probability Distribution</span>** : A description of how the total probability 1 is distributed among the various possible values of the ranom varible X. 
+
+- note : each possible value of the random variable X is assigned a probability. The sum of all the probabilites for the various possible values of X is equal to 1. 
+
+For **discrete** random variables, this is called the **<span style="color: orange;">Probability mass function (pmf)</span>**
+
+- $\forall x$ the pmf is defined as $p(x)=P(X=x)$
+
+Properties of the pmf : 
+
+1. $0\leq p(x)\leq1$
+
+2. $\sum\limits_{x\in S}p(x)=1$
+
+For **continuous** random variables, this is called the **<span style="color: orange;">Probability density function (pdf)</span>**
+
+- $\forall x$ the pdf is defined as $f(x)=P(a\leq X\leq b)=\int_a^bf(x)dx$
+
+Properties of pdf : 
+
+1. $f(x)\geq0\forall x$
+
+2. $\int_{-\infty}^{\infty}f(x)dx=1$
+
+### Relevant Properties 
+
+1. $P(X=a)=\int_a^af(x)dx=0\forall a$. 
+
+2. $P(a\leq X\leq b) = P(X=a)+P(a<X<b)+P(X=b)=P(a<X<b)$
+
+3. $P(a\leq X\leq b)=P(a<X\leq b)=P(a\leq X <b)=P(a<X<b)$
+
+This is only true for continuous distribution 
+
+### Example 1 - Discrete
+Flip a coin three times. Let X = {The number of heads}
+
+```{r, echo=F, message= F}
+X <- c(0,1,2,3)
+p.x <- c("1/8", "3/8", "3/8", "1/8")
+df <- data.frame(X, p.x) 
+df_new <- as.data.frame(t(df)) %>% kable() %>%
+  kable_material_dark()
+df_new
+```
+
+\[ 
+p(x) = \begin{cases}
+      1/8 & \text{if }x = 0\\
+      3/8 & \text{if }x =  1\\
+      3/8 & \text{if }x =  2\\
+      1/8 & \text{if }x =  3\\
+      0 & \text{otherwise} \\
+   \end{cases}
+\]
+
+![](img/img9.png)
+
+### Example 2
+A car dealer has 30 cars available for immediate sale, of which 10 are classified as compact cars. Three customers arrive and buy cars. Define the random variable X to be the number of compact cars sold. 
+
+(a) What is the pmf of X? 
+
+![](img/img10.png)
+
+(b) What is the probability exactly 2 cars are purchased? 
+
+$P(X=2)=\frac{900}{4060}$
+
+(c) What is the probability less than 2 compact cars are purchased? 
+
+$P(X<2)=P(X=0)+P(X=1)=0.281+0.468\approx 0.749$
+
+### Summary 
+
+- discrete random variables (countable)
+
+  - pmf 
+
+- continuous random variables (measureable) 
+
+  - pdf
+
+### To Do 
+
+- complete today's notes
+
+- compare hw1 to solutions 
+
+- HW2 
+
+- review this weeks examples 
+
+# D7 : Tues. Oct. 19th, 2021

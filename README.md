@@ -4,6 +4,8 @@ These are class notes and R code for Dorcas Ofori-Boaten's STAT-461 : Introducti
 View [here](https://rbolt13.github.io/stat461/)
 
 # To Do 
+* Make tree diagrams in R
+* Use latex in tables 
 * Ace this class
 
 # Done 
