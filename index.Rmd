@@ -1133,8 +1133,8 @@ $P(2<X<5)=\int_2^5\frac{1}{3}e^{-y/3}dy=(-1)[e^{-5/3}-e^{-2/3}]\approx 0.325$ 3 
 
 \[ 
 F(y) = \begin{cases}
-      0 & y\leq0 \\
-      1 & 0< y
+      0 & y<0 \\
+      1-e^{-y/3} & y\geq 0
    \end{cases}
 \]
 
@@ -1206,16 +1206,186 @@ For $x>2$ : $f(x)=F'(x)=0$
 
 - finish today's notes (complete)
 
-- review last week and today's examples 
+# W4-D8 : Thur. Oct. 21st, 2021
 
-# W4-D8 : Thu. Oct. 21st, 2021
+- no graphing calculators on tests, but R is okay? 
+
+- review 
+
+  - random variable : associates a real number with an outcome in S
+  
+  - Discrete : rv are a finite set with a countably infinite range
+  
+  - Continuous : rv whose range is an interval on the number line, and uncountably infinite. 
+  
+  - probability distribution : how the total probability 1 is distributed amoung rv X. 
+  
+  - PMF : for discrete rv (sum)
+  
+  - PDF : for continuous rv (integral)
+  
+  - CDF : rv X with PMF p(x)
+  
+    - $f(x)=F'(x)$ with PDF $f(x)$ and CDF $F(X)$. 
+    
+    - PDF is derivative of CDF 
+    
+    - CDF is integral of PDF
+  
+### Example 2
+Consider the pdf below: 
+
+\[
+f(x) = \begin{cases}
+  \frac{1}{2}x & 0\leq x <2\\
+  0 & \text{otherwise}\\
+  \end{cases}
+\]
+
+**(a) Obtain the cdf for any number between 0 and 2.**
+
+\[
+F(x) = \begin{cases}
+  0 & x<0\\
+  \frac{1}{4}x^2 & 0\leq x<2\\
+  1 & x\geq 2
+  \end{cases}
+\]
+
+- take note that 0 is at the top and 1 is at the bottom of the CDF function 
+
+**(b) Using the cdf, find $P(X\leq \frac{4}{5})$**
+
+$F(x)=P(X\leq x)$
+
+$P(X\leq \frac{4}{5})=F(\frac{4}{5})=\frac{1}{4}(\frac{4}{5})^2=\frac{4}{25}=0.16$
+
+- if use cdf route only integrate once and then plug in probabilities 
+
+**(c) Using the pdf, find $P(X\leq \frac{4}{5})$**
+
+$P(X\leq \frac{4}{5})=P(0\leq X\leq \frac{4}{5})=\int_0^{\frac{4}{5}}\frac{1}{2}xdx=\frac{4}{25}$
+
+- if use the pdf need to set up integral 
+
+**(d) Using the cdf, find $P(X> \frac{6}{5})$**
+
+$P(X> \frac{6}{5})=1-P(x\leq \frac{6}{5})=1-F(\frac{6}{5})=1-\frac{1}{4}(\frac{6}{5})^2=\frac{64}{100}=0.64$
+
+**(e) Using the cdf, find $P(\frac{1}{2}<X< \frac{5}{2})$**
+
+$P(\frac{1}{2}<X< \frac{5}{2})=F(\frac{5}{2})-F(\frac{1}{2})=1-\frac{1}{4}(\frac{1}{2})^2=\frac{15}{16}$
+
+### Expected Values - Discrete 
+Let X be a discrete random variable with set of possible values D and pmf _p(x)_. 
+
+- The mean or expected value of X is $$E(X)=\mu_X=\sum\limits_{X \in D}xp(x)$$
+
+- If a random variable _X_ has a set of possible values _D_ and pmf _p(x)_, then the expected value of any function _h(x)_ is $$E[h(x)]=\sum_{x\in D}h(x)p(x)$$
+
+### Example
+Flip a coin three times. X = {The number of heads}.
+Given $Y=3X+7$, calculate the expected value E(X), E(Y). 
+```{r, echo=FALSE}
+X <- c(0,1,2,3)
+p.x <- c(0.10, 0.45, 0.25, 0.20)
+df <- data.frame(X, p.x) 
+df_new <- as.data.frame(t(df)) %>% kable() %>%
+  kable_material_dark()
+df_new
+```
+
+$E(X)=\sum\limits_{x=1}^4xp(x)=0(\frac{1}{8})+1(\frac{3}{8})+2(\frac{3}{8})+3(\frac{1}{8})=\frac{3}{2}$
+
+$E(Y)=\sum\limits_{x=1}^3yp(x)=(2\times 0)(\frac{1}{8})+(2\times 1)(\frac{3}{8})+(2\times 2)(\frac{3}{8})+(2\times 3)(\frac{1}{8})=3$
+
+### Example 
+
+![](img/img12.png)
+
+### Properties of the expected value
+
+- Let a be some constant, X is a rv $E(aX)=aE(X)$
+
+- Let X and Y be two random variables, $E(X+Y)=E(X)+E(Y)$. 
+
+- Let b be some constant E(b) 
+
+**Compounding :** $E(aX+bY+c)=aE(X)+bE(Y)+c$
+
+### Variance of a random variable
+- Let X have pmf $p(x)$ and expected value $\mu_X$. Then the **<span style="color: orange;">variance</span>** of X is 
+
+$$\sigma^2(X)=V(X)=E[(X-\mu_x)^2]=\sum_{x\in D}(x-\mu_x)^2p(x)$$
+
+- By construction the **<span style="color: orange;">standard deviation</span>** is defined
+
+$$\sigma (X)=\sqrt{\sigma^2(X)}=\sqrt{V(X)}$$
+
+![](img/img13.png)
+
+### Example 
+Calculate $V(X)$ for using the shortcut formula. 
+```{r, echo=FALSE}
+X <- c(1,2,3, 4)
+p.x <- c(0.10, 0.45, 0.25, 0.20)
+df <- data.frame(X, p.x) 
+df_new <- as.data.frame(t(df)) %>% kable() %>%
+  kable_material_dark()
+df_new
+```
+
+$V(X)=f(x^2)-\mu_x^2$
+
+$f(x^2)=\sum\limits_{x=1}^4x^2p(x)=7.35$
+
+$\Rightarrow V(X)=7.35-2.55^2=0.8475$
+
+### Variance of a function 
+
+$$V[(h(X)]=E[(h(X)-\mu_{xh(x)})^2]=\sum_{x\in D}(h(x)-\mu_{h(x)})^2p(x)$$
+**Properties of Variance**
+
+- Let a be some constant, X is a RV $V(aX)=a^2V(X)$ . 
+
+- Let b be some constant, then $V(b)=0$. 
+
+### Summary 
+
+- Expected Value
+
+- Variance 
+
+**Additional Notes**
+
+- monday will cover continuous version of this (integrating instead of summing), and then will be good for the midterm
+
+- MIDTERM NEXT WEEK!!!! (Chapters 1-3)
 
 
 ### To Do 
 
-- practice homework problems (3 hours)
+- finish todays notes  (complete)
 
-- practive class examples (2 hours)
+- do practice problems from notes (1 hour : complete)
 
-- practice book examples (1 hour) 
+- practice problems from HW 1 (1 hour : complete)
+
+- practice book problems from chapter 2
+
+# W5-D9 : Tues. October 26, 2021
+
+### Summary 
+
+### To Do
+
+- practice problems from HW 2
+
+- practice problems from chapter 3
+
+# W5-D10 : Thur. Octorber 28, 201
+
+### Summary 
+
+### To Do 
 
