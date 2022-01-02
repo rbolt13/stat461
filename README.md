@@ -9,4 +9,5 @@ View [here](https://rbolt13.github.io/stat461/)
 
 # Done 
 ☑️ Update README
+
 ☑️ Ace this class
