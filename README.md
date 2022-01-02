@@ -6,7 +6,7 @@ View [here](https://rbolt13.github.io/stat461/)
 # To Do 
 * Make tree diagrams in R
 * Use latex in tables 
-* Ace this class
 
 # Done 
 ☑️ Update README
+☑️ Ace this class
